@@ -17,3 +17,12 @@ Here are User Stories (work in progress):
 * [ ] When exploring, I want to be able to find items
 * [ ] I want to be able to fight baddies
 * [ ] When fighting, I want to know how close to losing I am (player HP is visible)
+
+## Godot Import Instructions
+If you'd like to play around with this project, you can import it into Godot:
+
+* Clone this repo
+* Start up Godot
+* On the Project List, click the "Import" button
+* "Browse" your filesystem to this repo and go into the "game" directory
+* select the file "engine.cfg" and click "Open"
