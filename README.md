@@ -25,4 +25,4 @@ If you'd like to play around with this project, you can import it into Godot:
 * Start up Godot
 * On the Project List, click the "Import" button
 * "Browse" your filesystem to this repo and go into the "game" directory
-* select the file "engine.cfg" and click "Open"
+* Select the file "engine.cfg" and click "Open"
