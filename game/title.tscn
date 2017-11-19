@@ -64,6 +64,8 @@ shortcut = null
 text = "Exit"
 flat = false
 
+[connection signal="pressed" from="play button" to="." method="_on_play_button_pressed"]
+
 [connection signal="pressed" from="exit button" to="." method="_on_exit_button_pressed"]
 
 
