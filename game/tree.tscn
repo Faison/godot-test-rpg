@@ -1,4 +1,9 @@
-[gd_scene format=1]
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -25,5 +30,25 @@ margin/top = 0.0
 margin/right = 40.0
 margin/bottom = 40.0
 color = Color( 0.151281, 0.3125, 0.133057, 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 20, 70 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+
+transform/pos = Vector2( 20, 70 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
 
 

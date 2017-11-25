@@ -7,13 +7,14 @@ func _ready():
 
 func _process(delta):
 	var player = get_node("player")
-	var player_pos = player.get_pos()
+	var motion = Vector2()
 	if ( Input.is_action_pressed("input_up") ):
-		player_pos.y -= PLAYER_SPEED * delta
+		motion += Vector2(0, -1)
 	if ( Input.is_action_pressed("input_down") ):
-		player_pos.y += PLAYER_SPEED * delta
+		motion += Vector2(0, 1)
 	if ( Input.is_action_pressed("input_left") ):
-		player_pos.x -= PLAYER_SPEED * delta
+		motion += Vector2(-1, 0)
 	if ( Input.is_action_pressed("input_right") ):
-		player_pos.x += PLAYER_SPEED * delta
-	player.set_pos( player_pos )
+		motion += Vector2(1, 0)
+	motion = motion.normalized() * PLAYER_SPEED * delta
+	player.move( motion )
