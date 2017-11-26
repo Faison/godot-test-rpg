@@ -6,7 +6,7 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	var player = get_node("player")
+	var player = get_node("TileMap/player")
 	var motion = Vector2()
 	if ( Input.is_action_pressed("input_up") ):
 		motion += Vector2(0, -1)
